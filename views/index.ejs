@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/public/styles/index.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Ramais</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+          <i class="fas fa-bars"><img src="/image/1x/baseline_view_list_white_24dp.png" alt=""></i>
+      </label>
+      <label class="logo">Portal DTI</label>
+      <ul>
+          <li><a class= "active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Feedback</a></li>
+      </ul>
+  </nav>
+
+    <div class="container">
+     
+
+        <a href="/create" class="plus"><i class="fas fa-plus"></i></a>
+
+        <table class="content-table">
+          <thead>
+            <tr class="">
+              <th scope="col" >Id</th>
+              <th scope="col">Ramal</th>
+              <th scope="col">Setor</th>
+              <th scope="col">Funcionario</th>
+              <th scope="col">Empresa</th>
+              <th scope="col" >Acão</th>
+              
+            </tr>
+          </thead>
+
+
+          <tbody>
+            <% result.forEach((tcadastro) => { %>
+
+
+           <tr class="active-row">
+             <td><%= tcadastro.id %></td>
+             <td><%= tcadastro.ramal %></td>
+             <td><%= tcadastro.setor %></td>
+             <td><%= tcadastro.funcionario %></td>
+             <td><%= tcadastro.empresa %></td>
+             <td id="action-colun">
+              <a href="/edit/<%= tcadastro.id %>"><button type="button" class="button-edit"><i class="fas fa-edit"></i></button></a>
+              <a href="/delete/<%= tcadastro.id %>" ><button type="button" class="button-delete"><i class="fas fa-trash"></i></button></a>
+             </td>
+           </tr>
+         <% }) %>
+          </tbody>
+        </table>
+    </div>
+
+  
+    
+
+    
+
+   
+  </body>
+</html>
