@@ -18,7 +18,7 @@ router.get('/', (request, response) => {
     
 });
 
-//  preview
+//  preview 
 /**
  * router.get('/preview', (request, response) => {
     
@@ -61,7 +61,7 @@ router.get('/edit/:id', crud.editById);
 //rota para apagar registros
 router.get('/delete/:id', crud.deleteById);
 
-//rota para salvar registros
+//rota para salvar registros 
 router.post('/save', crud.save);
 
 router.post('/update', crud.update);

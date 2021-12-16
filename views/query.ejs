@@ -12,11 +12,27 @@
     <!-- usamos boxicons-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
+    <link rel="stylesheet" href="/public/styles/query.css">
+
     <title>ramais</title>
 </head>
 
 <body>
    
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"><img src="/image/1x/baseline_view_list_white_24dp.png" alt=""></i>
+        </label>
+        <label class="logo">Portal DTI</label>
+        <ul>
+            <li><a class= "active" href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
     
     <div class="container mt-4">
         <div class="card border-secondary">
@@ -48,8 +64,8 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary" tabindex="5">Confirmar</button>
-                    <a href="/preview" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-success" tabindex="5">Confirmar</button>
+                    <a href="/read" class="btn btn-secondary">Cancelar</a>
                 </form>
             </div>
         </div>
