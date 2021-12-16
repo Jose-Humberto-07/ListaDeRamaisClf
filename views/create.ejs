@@ -12,37 +12,25 @@
     <!-- usamos boxicons-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
+    <link rel="stylesheet" href="/public/styles/create.css">
+
     <title>ramais</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"><img src="/image/1x/baseline_view_list_white_24dp.png" alt=""></i>
+        </label>
+        <label class="logo">Portal DTI</label>
+        <ul>
+            <li><a class= "active" href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
     </nav>
 
     <div class="container mt-4">
@@ -64,7 +52,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="empresa" class="form-label">Empresa</label>
-                        <input type="text"name="empresa" class="form-control" id="empresa" tabindex="4">
+                        <select id="empresa" name="empresa" class="form-select" tabindex="4">
+                            <optgroup>
+                                <option value="central">Centro</option>
+                                <option value="parangaba">Parangaba</option>
+                                <option value="vegaSul">Vega Sul</option>
+                                <option value="montese">Montese</option>
+                               </optgroup>
+                        </select>
                     </div>
 
 
