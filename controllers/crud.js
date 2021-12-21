@@ -12,7 +12,7 @@ exports.save = (request, response) => {
         if (error) {
             console.log(error);
         }else{
-            response.redirect('/');
+            response.redirect('/admin');
         }
     })
 }
@@ -29,7 +29,7 @@ exports.update = (request, response) => {
         if (error) {
             console.log(error);
         }else{
-            response.redirect('/');
+            response.redirect('/admin');
         }
     })
 }
@@ -53,7 +53,7 @@ exports.deleteById = (request, response) => {
         if (error) {
             throw error;
         } else {
-            response.redirect('/');
+            response.redirect('/admin');
         }
     })
 }
@@ -68,6 +68,37 @@ exports.editById = (request, response) => {
         }
     })
 }
+
+/**
+ * 
+ * exports.validation = (request, response) => {
+   
+    const { id, user, password } = request.body;
+
+    connection.query('SELECT * FROM users WHERE user = ? and password = ?', [user, password], (error, results) => {
+
+        if (user != "admin") {
+            console.log(error);
+        }else{
+            response.render('/admin');
+        }
+    })
+}
+ */
+
+exports.validation = (request, response) => {
+   
+    const { id, user, password } = request.body;
+
+    if (user != "admin" || password != "admin") {
+        response.redirect('login');
+        //console.log(error);
+    }else{
+        response.redirect('admin');
+    }
+}
+
+ 
 
 
 

@@ -6,13 +6,13 @@ const bodyParer = require('body-parser');
 
 
 // rota para a tela de cadastro 
-router.get('/', (request, response) => {
+router.get('/admin', (request, response) => {
     
     connection.query('SELECT * FROM tcadastro', (error, result) => {
         if (error) {
             throw error;
         } else {
-            response.render('index', { result: result });
+            response.render('admin', { result: result });
         }
     })
     
@@ -41,9 +41,14 @@ router.get('/create', (request, response) => {
     response.render('create');
 });
 
+// tela de login
+router.get('/login', (request, response) => {
+    response.render('login');
+});
+
 // rota da tela de consultar registro
-router.get('/query', (request, response) => {
-    response.render('query');
+router.get('/', (request, response) => {
+    response.render('index');
 });
 
 // rota da tela preview
@@ -68,5 +73,8 @@ router.post('/update', crud.update);
 
 //rota para renderizar registros filtrados
 router.post('/read', crud.read);
+
+// rota login
+router.post('/validation', crud.validation);
 
 module.exports = router;
