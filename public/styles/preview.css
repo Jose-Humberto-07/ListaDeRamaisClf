@@ -20,29 +20,41 @@ body {
 }
 
 nav {
-    background: #009879;
+    display: flex;
+    background: #004f98;
     height: 80px;
     width: 100%;
+}
+
+nav img {
+    
+    height: 60px;
+    margin: 10px 0 20px 110px;
+    border-radius: 5px;
+    
+   
 }
 
 label.logo {
     color: white;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 10px;
     font-weight: bold;
+
+    margin: 0 0 100px 0;
 }
 
 nav ul {
-    float: right;
-    margin-right: 20px;
+    margin-right: 100px;
+    margin-left: 1000px;
 
 }
 
 nav ul li {
     display: inline-block;
     line-height: 80px;
-    margin: 0 5px;
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -55,7 +67,7 @@ nav ul li a {
 }
 
 a.active, a:hover {
-    background: #00CD66;
+    background: #4271f3;
     transition: .5s;
 }
 
@@ -118,7 +130,7 @@ img {
 
    a:hover, a.active {
        background: none;
-       color: #0082e6;
+       color: #4271f3;
    }
 
    #check:checked ~ ul {
@@ -138,7 +150,7 @@ img {
 }
 
 .content-table thead tr {
-    background-color: #009879;
+    background-color: #004f98;
     color: #ffffff;
     
     text-align: center;
@@ -160,7 +172,7 @@ img {
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #004f98;
 }
 
 .content-table tbody tr.active-row {
@@ -183,7 +195,7 @@ img {
     text-align: center;
     height: 100%;
     width: 300px;
-    background: #00CD66;
+    background: #004f98;
     color: #ffffff;
     border-radius: 5px;
     font-size: 25px;

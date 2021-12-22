@@ -20,39 +20,44 @@
 <body>
    
     <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"><img src="/image/1x/baseline_view_list_white_24dp.png" alt=""></i>
-        </label>
-        <label class="logo">Portal DTI</label>
+        <img src="/public/image/cropped-LOGO-LOURENÇO-FILHO-105x95.png" alt="CLF">
+        
+        <label class="logo">DTI RAMAIS</label>
+
         <ul>
             <li><a class= "active" href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            
             <li><a href="/login">Login</a></li>
-            <li><a href="#" onclick="">Feedback</a></li>
+            
         </ul>
     </nav>
     
     <div class="container mt-4">
         <div class="card border-secondary">
-            <div class="card-header">Consultar registro</div>
+            <div class="card-header" style="font-weight: bold;">Consultar registro</div>
             <div class="card-body">
                 <form action="/read" method="POST">
-                    <div class="mb-3">
+                    <div class="mb-3" hidden>
                         <label for="ramal" class="form-label">Ramal</label>
                         <input type="text" name="ramal" class="form-control" id="ramal" tabindex="1" >
                     </div>
                     <div class="mb-3">
-                        <label for="setor" class="form-label">Setor</label>
-                        <input type="text" name="setor" class="form-control" id="setor" tabindex="2">
+                        <label for="setor" class="form-label" style="font-weight: bold;">Setor</label>
+                        <select id="setor" name="setor" class="form-select" id="setor" tabindex="2">
+                            <optgroup>
+                                <option value="dti">dti</option>
+                                <option value="secretaria">secretaria</option>
+                                <option value="financeiro">financeiro</option>
+                                <option value="coordenacao">coordenacao</option>
+                               </optgroup>
+                        </select>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3" hidden>
                         <label for="funcionario" class="form-label">Funcionário</label>
                         <input type="text" name="funcionario" class="form-control" id="funcionario" tabindex="3">
                     </div>
                     <div class="mb-3">
-                        <label for="empresa" class="form-label">Empresa</label>
+                        <label for="empresa" class="form-label" style="font-weight: bold;">Empresa</label>
                         <select id="empresa" name="empresa" class="form-select" tabindex="4">
                             <optgroup>
                                 <option value="central">Centro</option>

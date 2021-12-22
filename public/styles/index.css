@@ -9,6 +9,59 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+nav {
+    display: flex;
+    
+    background: #004f98;
+    height: 80px;
+    width: 100%;
+    
+}
+
+nav img {
+    
+    height: 60px;
+    margin: 10px 0 20px 110px;
+    border-radius: 5px;
+    
+   
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 10px;
+    font-weight: bold;
+    
+    margin: 0 0 100px 0;
+}
+
+nav ul {
+    
+    margin-right: 100px;
+    margin-left: 1000px;
+   
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
+    
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
 .plus {
     display: flex;
     justify-content: center;
@@ -58,43 +111,9 @@ body {
     
 }
 
-nav {
-    background: #009879;
-    height: 80px;
-    width: 100%;
-}
-
-label.logo {
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-}
-
-nav ul {
-    float: right;
-    margin-right: 20px;
-
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
 
 a.active, a:hover {
-    background: #00CD66;
+    background: #4271f3;
     transition: .5s;
 }
 
@@ -177,7 +196,7 @@ img {
 }
 
 .content-table thead tr {
-    background-color: #009879;
+    background-color: #004f98;
     color: #ffffff;
     
     text-align: center;
@@ -199,7 +218,7 @@ img {
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #004f98;
 }
 
 .content-table tbody tr.active-row {
